@@ -1,0 +1,69 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOhIQS6/1qSt3kjvUDibQrp",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/pornimamaknikar70/Assigment-1/blob/main/Assignment%202%20\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 2,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "FdiIabGHCOK4",
+        "outputId": "34922d5f-46c6-49a3-9024-670277df95d1"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Original: running, Stemmed: run\n",
+            "Original: jumps, Stemmed: jump\n",
+            "Original: easily, Stemmed: easili\n",
+            "Original: flying, Stemmed: fli\n"
+          ]
+        }
+      ],
+      "source": [
+        "from nltk.stem import PorterStemmer\n",
+        "\n",
+        "# Initialize the PorterStemmer\n",
+        "porter = PorterStemmer()\n",
+        "\n",
+        "# List of words to stem\n",
+        "words = [\"running\", \"jumps\", \"easily\", \"flying\"]\n",
+        "\n",
+        "# Perform stemming\n",
+        "stems = [porter.stem(word) for word in words]\n",
+        "\n",
+        "# Display results\n",
+        "for word, stem in zip(words, stems):\n",
+        "    print(f\"Original: {word}, Stemmed: {stem}\")"
+      ]
+    }
+  ]
+}
